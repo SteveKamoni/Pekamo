@@ -1,0 +1,56 @@
+/* src/styles/_variables.scss
+   Single source of truth: colors, fonts, breakpoints (Sass-only breakpoints included).
+   No mixins, no utils. Component .module.scss files will reference these $ variables.
+*/
+
+/* ---------- Colors (Sass tokens) ---------- */
+$color-primary:  #CDF24A;
+$color-secondary:#1B3D2F;
+$color-dark:     #005249;
+$color-light:    #F2FEDC;
+$color-bg:       #F8F8F8;
+$color-text:     #000000;
+$color-white:    #ffffff;
+
+/* Export the same values as CSS custom properties for runtime use (optional) */
+:root {
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-dark: #{$color-dark};
+  --color-light: #{$color-light};
+  --color-bg: #{$color-bg};
+  --color-text: #{$color-text};
+  --color-white: #{$color-white};
+}
+
+/* ---------- Typography (Sass tokens) ---------- */
+$font-primary:   "Poppins", sans-serif;
+$font-secondary: "Montserrat", sans-serif;
+$font-nav:       "Jura", sans-serif;
+$font-text:      "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+/* ---------- Base / scale ---------- */
+$base-font-size: 16; /* px - use if you want to compute rems manually */
+
+/* ---------- Breakpoints (Sass-only) ---------- */
+$breakpoint-phone:  600px;
+$breakpoint-tablet: 900px;
+$breakpoint-desktop: 1200px;
+
+
+/* Simple responsive mixin */
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: $breakpoint-phone) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (max-width: $breakpoint-tablet) { @content; }
+  } @else if $breakpoint == desktop {
+    @media (min-width: $breakpoint-desktop) { @content; }
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}. Use: phone, tablet, desktop.";
+  }
+}
