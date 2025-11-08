@@ -26,6 +26,9 @@ export default function Navbar() {
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
     { id: "products", label: "Products" },
+    { id: "contact", label: "Solutions" },
+    { id: "quote", label: "Why Us" },
+    { id: "products", label: "Testimonials" },
     { id: "contact", label: "Contact" },
     { id: "quote", label: "Quote" }
   ];
