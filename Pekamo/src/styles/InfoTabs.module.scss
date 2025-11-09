@@ -1,112 +1,40 @@
 .infoTabs {
-  padding: 4rem 2rem;
+  padding: 2rem;
   background-color: $color-bg;
   font-family: $font-text;
-  color: $color-text;
 }
 
-.tabNav {
+.nav {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 3rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
 
-  button {
-    background: none;
-    border: none;
-    font-family: $font-nav;
-    font-size: 1.125rem;
-    font-weight: $font-weight-bold;
-    color: $color-dark;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    position: relative;
+.tabButton {
+  background-color: transparent;
+  border: 2px solid $color-dark;
+  border-radius: 12px;
+  padding: 0.5rem 1.25rem;
+  font-family: $font-nav;
+  font-weight: $font-weight-bold;
+  font-size: 1rem;
+  color: $color-dark;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 
-    &.active::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background-color: $color-primary;
-    }
+  &:hover {
+    border-color: $color-primary;
+    color: $color-primary;
+  }
 
-    &:hover {
-      color: $color-primary;
-    }
+  &.active {
+    background-color: $color-primary;
+    color: $color-white;
+    border-color: $color-primary;
   }
 }
 
-.panel {
-  max-width: 1200px;
-  margin: 0 auto;
-
-  h2 {
-    font-family: $font-primary;
-    font-size: 2rem;
-    font-weight: $font-weight-bold;
-    margin-bottom: 1rem;
-    color: $color-secondary;
-  }
-
-  h3 {
-    font-family: $font-secondary;
-    font-size: 1.25rem;
-    font-weight: $font-weight-medium;
-    margin-bottom: 0.5rem;
-    color: $color-dark;
-  }
-
-  p {
-    font-family: $font-text;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-}
-
-.missionGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
-
-  @include respond(tablet) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include respond(phone) {
-    grid-template-columns: 1fr;
-  }
-
-  div {
-    background-color: $color-light;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  }
-}
-
-.visionLayout {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  margin-top: 2rem;
-
-  @include respond(tablet) {
-    flex-direction: column;
-  }
-
-  .visionImage {
-    flex: 1;
-    img {
-      width: 100%;
-      border-radius: 12px;
-    }
-  }
-
-  .visionText {
-    flex: 2;
-  }
+.content {
+  margin-top: 1rem;
 }
