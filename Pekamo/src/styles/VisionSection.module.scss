@@ -1,0 +1,53 @@
+.vision {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding: 2rem 0;
+  //   align-items: center;
+
+  @include respond(phone) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.image {
+flex: 1;
+max-width: 900px;
+width: auto;
+
+  img {
+    width: 100%;
+    border-radius: 2.5rem; // between 2–3rem
+    object-fit: cover;
+  }
+}
+
+.text {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+
+  .title {
+    font-family: $font-primary;
+    font-size: 2.5rem;
+    font-weight: $font-weight-bold;
+    color: $color-secondary;
+  }
+
+  .description {
+    font-family: $font-text;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: $color-text;
+  }
+
+  .statement {
+    font-family: $font-secondary;
+    font-size:3.8rem;
+    font-weight: $font-weight-bold;
+    color: $color-dark;
+  }
+}

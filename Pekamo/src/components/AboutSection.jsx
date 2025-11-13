@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from '../styles/AboutSection.module.scss';
-import image1 from "../assets/hero.jpg"
-
+import image1 from "../assets/About-intro.jpg"
+import image2 from "../assets/Years-img.jpg";
+import image3 from "../assets/Customer.jpg";
 
 const AboutSection = () => {
   return (
@@ -24,7 +25,7 @@ const AboutSection = () => {
 
       <div className={styles.collage}>
         <div className={styles.item}>
-          <img src={image1} alt="Crafting stoves" />
+          <img src={image2} alt="Crafting stoves" />
           <div className={styles.box}>
             <h2>5+</h2>
             <h3>Years of building Jikos</h3>
@@ -32,7 +33,7 @@ const AboutSection = () => {
           </div>
         </div>
         <div className={styles.item}>
-          <img src={image1} alt="Efficient systems" />
+          <img src={image3} alt="Efficient systems" />
           <div className={styles.box}>
             <h2>5+</h2>
             <h3>Years of building Jikos</h3>

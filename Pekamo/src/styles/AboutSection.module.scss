@@ -2,11 +2,13 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  height: 87.5vh;
+  height:100%;
+  width: 100%;
 }
 
 .topSection {
   display: flex;
+  justify-content: center;
   gap: 7rem;
 
   @include respond(phone) {
@@ -15,7 +17,7 @@
 
   .image {
     flex: 1;
-
+    max-width: 650px;
     img {
       width: 100%;
       border-radius: 2rem;
@@ -24,7 +26,7 @@
 
   .text {
     flex: 2;
-    max-width: 1000px;
+    max-width: 900px;
 
     h2 {
       font-family: $font-primary;

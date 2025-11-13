@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from '../styles/InfoTabs.module.scss';
 import AboutSection from './AboutSection';
-
+import VisionSection from './VisionSection';
 
 const tabs = [
   { id: 'about', label: 'About' },
@@ -16,8 +16,8 @@ const InfoTabs = () => {
     switch (activeTab) {
       case 'about':
         return <AboutSection />;
-      // case 'vision':
-      //   return <VisionSection />;
+      case 'vision':
+        return <VisionSection />;
       // case 'mission':
       //   return <MissionSection />;
       default:
