@@ -5,6 +5,8 @@ import ProductSection from '../components/ProductSection'
 import SolutionsSection from '../components/SolutionsSection'
 import WhyUsSection from '../components/WhyUsSection'
 import TestimonialsSection from '../components/TestimonialsSection'
+import CTASection from '../components/CTASection' 
+import ContactSection from '../components/ContactSection'
 
 
 const Home = () => {
@@ -16,6 +18,8 @@ const Home = () => {
         <SolutionsSection/>
         <WhyUsSection/>
         <TestimonialsSection/>
+        <CTASection/>
+        <ContactSection/>
     </div>
   )
 }
