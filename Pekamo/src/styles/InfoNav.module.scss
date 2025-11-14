@@ -13,19 +13,19 @@
   color: $color-dark;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  border: 2px solid $color-dark;
-  border-radius: 12px;
+  border: 1px solid $color-dark;
+  border-radius: 5rem;
   background-color: transparent;
   transition: background-color 0.3s ease, color 0.3s ease;
 
   &:hover {
-    color: $color-primary;
-    border-color: $color-primary;
+    color: $color-secondary;
+    // border-color: $color-primary;
   }
 }
 
 .active {
   background-color: $color-primary;
-  color: $color-white;
-  border-color: $color-primary;
+  color: $color-secondary;
+  border-color: $color-secondary;
 }

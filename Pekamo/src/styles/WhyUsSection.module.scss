@@ -1,0 +1,97 @@
+.whyUs {
+  padding: 4rem 2rem;
+  background-color: $color-bg;
+  height: 90vh;
+  
+  .title {
+      text-align: center;
+      font-family: $font-primary;
+      font-size: 3.5rem;
+      font-weight: $font-weight-bold;
+      color: $color-secondary;
+      margin-bottom: 3rem;
+    }
+}
+
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centers cards horizontally */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.card {
+  background-color: $color-grey;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    /* controls card width */
+  flex: 1 1 300px; /* grows, shrinks, min width 300px */
+  max-width: 350px; /* prevents oversized cards */
+
+  .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: inherit;
+  }
+
+  h3 {
+    font-family: $font-secondary;
+    font-size: 1.25rem;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0.5rem;
+    color: $color-dark;
+  }
+
+  p {
+    font-family: $font-text;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $color-text;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Subtle color themes
+.experience {
+  border-top: 4px solid #7D7D7D; // neutral gray
+
+  .icon{
+    color:#a8a8a8;
+  }
+}
+
+.engineering {
+  border-top: 4px solid #FF8C42; // warm orange
+
+    .icon{
+    color: #ffaf7d;;
+  }
+}
+
+.customer {
+  border-top: 4px solid #3A86FF; // vibrant blue
+
+    .icon{
+    color: #85acea;
+  }
+}
+
+.environment {
+  border-top: 4px solid #4CAF50; // natural green
+
+    .icon{
+    color: #648d65;
+  }
+}

@@ -1,0 +1,112 @@
+.products {
+  padding: 4rem 5rem;
+  background-color: $color-bg;
+
+  .title {
+    font-family: $font-primary;
+    font-size: 3.5rem;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: $color-secondary;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1700px; // or whatever fits your layout
+  margin: 0 auto;     // centers the grid horizontally
+}
+
+
+.card {
+  width: 350px;
+  background-color: $color-grey;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+
+  img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-family: $font-secondary;
+    font-size: 1.25rem;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0.5rem;
+    color: $color-dark;
+  }
+
+  p {
+    font-family: $font-text;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: $color-text;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 1rem;
+    margin-top: auto;
+  }
+
+  .buttonPrime {
+    background-color: $color-primary;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    font-weight: $font-weight-medium;
+    color: $color-text;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-white;
+    }
+  }
+
+    .buttonSec {
+    background-color: transparent;
+    border: 2px solid $color-dark;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    font-weight: $font-weight-medium;
+    color: $color-dark;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-white;
+    }
+  }
+
+  &:hover {
+    background-color: rgba($color-secondary, 0.6);
+    color: $color-white;
+    transform: scale(1.05);
+    cursor: pointer;
+
+    p {
+      color: $color-white;
+    }
+    h3 {
+      color: $color-primary;
+    }
+  }
+}

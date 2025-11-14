@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from '../styles/InfoTabs.module.scss';
 import AboutSection from './AboutSection';
 import VisionSection from './VisionSection';
+import MissionSection from './MissionSection';
 
 const tabs = [
   { id: 'about', label: 'About' },
@@ -18,15 +19,15 @@ const InfoTabs = () => {
         return <AboutSection />;
       case 'vision':
         return <VisionSection />;
-      // case 'mission':
-      //   return <MissionSection />;
+      case 'mission':
+        return <MissionSection />;
       default:
         return null;
     }
   };
 
   return (
-    <section className={styles.infoTabs}>
+    <section className={styles.infoTabs} id='about'>
       <nav className={styles.nav}>
         {tabs.map(tab => (
           <button
