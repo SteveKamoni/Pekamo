@@ -1,0 +1,225 @@
+.contact {
+    padding: 4rem 2rem;
+    background: $color-bg;
+    color: $color-dark;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 2rem;
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Left directory */
+.left {
+    .heading {
+        font-family: $font-primary;
+        font-size: 3.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .lead {
+        font-family: $font-secondary;
+        color: $color-text;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .directory {
+        display: grid;
+        gap: 0.75rem;
+
+        strong {
+            font-size: 2rem;
+            color: $color-dark;
+            font-family: $font-primary;
+            font-weight: $font-weight-medium;
+        }
+
+        span {
+            font-family: $font-secondary;
+            font-size: 1.2rem;
+            color: $color-text;
+            font-family: $font-weight-normal;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .link {
+            color: $color-text;
+            text-decoration: none;
+            font-family: $font-secondary;
+        }
+
+        .socials {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .socialLink {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 6px;
+            color: $color-dark; // default color
+            background: transparent;
+            text-decoration: none;
+            transition: background .18s ease, transform .12s ease, color .18s ease;
+
+            svg {
+                width: 18px;
+                height: 18px;
+                color: inherit; // icon follows .socialLink color
+            }
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.04);
+                transform: translateY(-2px);
+            }
+
+            &:focus {
+                outline: 3px solid rgba($color-primary, 0.18);
+                outline-offset: 2px;
+            }
+        }
+
+        /* If you want icons to match primary accent */
+        .socialLink.accent {
+            color: $color-primary;
+        }
+
+
+        .micro {
+            margin-top: 1.3rem;
+            color: $color-text;
+            font-family: $font-secondary;
+            font-size: 0.95rem;
+        }
+    }
+}
+
+/* Right card */
+.right {
+    .card {
+        background: $color-secondary;
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        box-shadow: 0 8px 30px rgba(11, 22, 40, 0.06);
+        overflow: hidden;
+        width: fit-content;
+        height: auto;
+    }
+
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+        font-size: 2rem;
+        font-family: $font-primary;
+        color: $color-white;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .label {
+        font-size: 0.9rem;
+        margin-bottom: 0.35rem;
+        color: $color-white;
+        font-family: $font-secondary;
+    }
+
+    select,
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        padding: 0.6rem 0.75rem;
+        border: 1px solid rgba(11, 22, 40, 0.08);
+        border-radius: 0.5rem;
+        background: white;
+        font-size: 0.95rem;
+    }
+
+    .twoCol {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+
+    .inline {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .error {
+        color: #c23;
+        font-size: 0.85rem;
+        margin-top: 0.25rem;
+    }
+
+    .actions {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        margin-top: 0.5rem;
+
+        .primary {
+            background: $color-primary;
+            color: #fff;
+            padding: 0.6rem 1rem;
+            border-radius: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .linkButton {
+            background: transparent;
+            color: $color-primary;
+            text-decoration: underline;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+        }
+    }
+
+    .privacy {
+        font-size: 0.85rem;
+        color: $color-grey;
+        margin-top: 0.5rem;
+    }
+}
+
+
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+    .right {
+        order: 2;
+    }
+
+    .left {
+        order: 1;
+    }
+
+    .twoCol {
+        grid-template-columns: 1fr;
+    }
+}

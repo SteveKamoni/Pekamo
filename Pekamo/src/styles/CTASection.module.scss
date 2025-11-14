@@ -1,0 +1,112 @@
+.cta {
+  background-size: cover;
+  background-position: center;
+//   padding: 6rem 2rem;
+  position: relative;
+  color: white;
+}
+
+.overlay {
+  background: rgba($color-secondary, 0.5);
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.content h2 {
+  font-size: 4rem;
+  font-family: $font-primary;
+  font-weight: $font-weight-bold;
+  margin-bottom: 1rem;
+}
+
+.subtext {
+  font-size: 1.5rem;
+  font-weight: $font-weight-medium;
+  margin-bottom: 2rem;
+  color: #d0f0c0;
+}
+
+.trust {
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: #ccc;
+
+  span {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: $font-weight-normal;
+    margin-top: 0.5rem;
+    color: #aaa;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+
+  button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .primary {
+    background-color: $color-primary;
+    color: $color-text;
+    font-weight: $font-weight-bold;
+
+    .arrow{
+    background-color: $color-secondary;
+    width: 40px;
+    height: 40px;
+    border-radius: 2rem;
+    font-weight: $font-weight-normal;
+    color: $color-white;
+
+    &:hover{
+        background-color: $color-white;
+        color: $color-secondary;
+    }
+  }
+
+    &:hover {
+      transform: scale(1.05);
+      background-color: $color-secondary;
+      color: $color-white;
+    }
+  }
+
+  .secondary {
+    background-color: transparent;
+    color: $color-white;
+    border: 1px solid $color-white;
+    font-weight: $font-weight-bold;
+
+    &:hover {
+      transform: scale(1.05);
+      background-color: rgba($color-white, 0.2);
+    }
+  }
+}
+
+.micro {
+  font-size: 0.85rem;
+  color: #bbb;
+  margin-top: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
