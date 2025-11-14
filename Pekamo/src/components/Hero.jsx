@@ -5,7 +5,7 @@ import Heroimg from "../assets/hero.jpg"
 
 export default function Hero() {
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} id="home">
       <div className={styles.overlay}></div>
 
       <div className={styles.content}>

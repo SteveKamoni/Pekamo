@@ -3,6 +3,10 @@
    No mixins, no utils. Component .module.scss files will reference these $ variables.
 */
 
+html{
+  scroll-behavior: smooth;
+}
+
 /* ---------- Colors (Sass tokens) ---------- */
 $color-primary:  #CDF24A;
 $color-secondary:#1B3D2F;
@@ -11,6 +15,7 @@ $color-light:    #F2FEDC;
 $color-bg:       #F8F8F8;
 $color-text:     #000000;
 $color-white:    #ffffff;
+$color-grey: #ECECEC;
 
 /* Export the same values as CSS custom properties for runtime use (optional) */
 :root {
