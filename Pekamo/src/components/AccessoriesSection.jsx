@@ -11,45 +11,53 @@ const accessoriesData = [
     category: 'Chimneys',
     image: Prod1,
     specs: [
-      { model: '6001', size: '4”', weight: '3 Kg', price: 'KSh 500' },
-      { model: '6002', size: '5”', weight: '4 Kg', price: 'KSh 600' },
-      { model: '6003', size: '6”', weight: '5 Kg', price: 'KSh 700' },
+    { model: '6001', size: '10 cm', price: 'KSh 11,000' },
+    { model: '6002', size: '12 cm', price: 'KSh 14,000' },
+    { model: '6003', size: '14 cm', price: 'KSh 15,000' },
+    { model: '6004', size: '16 cm', price: 'KSh 17,000' },
     ],
   },
   {
     category: 'Cast Iron Fire Crates',
     image: Prod2,
     specs: [
-      { model: '6101', size: 'Small', weight: '6 Kg', price: 'KSh 1000' },
-      { model: '6102', size: 'Medium', weight: '8 Kg', price: 'KSh 1200' },
-      { model: '6103', size: 'Large', weight: '10 Kg', price: 'KSh 1500' },
+      { model: '6101', size: '260 mm Rectangular', price: 'KSh 12,000' },
+      { model: '6102', size: '300 mm Rectangular', price: 'KSh 15,000' },
+      { model: '6103', size: '260 mm Diameter',  price: 'KSh 12,000' },
+      { model: '6104', size: '300 mm Diameter',  price: 'KSh 15,000' },
     ],
   },
   {
     category: 'Stainless Sufurias',
     image: Prod3,
     specs: [
-      { model: '6201', size: '20cm', weight: '1.5 Kg', price: 'KSh 800' },
-      { model: '6202', size: '25cm', weight: '2 Kg', price: 'KSh 1000' },
-      { model: '6203', size: '30cm', weight: '2.5 Kg', price: 'KSh 1200' },
+      { model: '6201', size: '50 Litres', price: 'KSh 40,000' },
+      { model: '6201', size: '100 Litres', price: 'KSh 50,000' },
+      { model: '6201', size: '150 Litres', price: 'KSh 55,000' },
+      { model: '6201', size: '200 Litres', price: 'KSh 60,000' },
+      { model: '6201', size: '250 Litres', price: 'KSh 65,000' },
+      { model: '6201', size: '300 Litres', price: 'KSh 70,000' },
+      { model: '6201', size: '400 Litres', price: 'KSh 95,000' },
+      { model: '6201', size: '500 Litres', price: 'KSh 120,000' },
+      { model: '6201', size: '600 Litres', price: 'KSh 130,000' },
     ],
   },
-  {
-    category: 'Woodstove Ovens',
-    image: Prod4,
-    specs: [
-      { model: '5017', size: '18\"', weight: '20 Kg', price: 'KSh 2500' },
-      { model: '5018', size: '20\"', weight: '22 Kg', price: 'KSh 2700' },
-    ],
-  },
+//   {
+//     category: 'Woodstove Ovens',
+//     image: Prod4,
+//     specs: [
+//       { model: '5017', size: '18\"', weight: '20 Kg', price: 'KSh 2500' },
+//       { model: '5018', size: '20\"', weight: '22 Kg', price: 'KSh 2700' },
+//     ],
+//   },
   {
     category: 'Super-Combine Woodstove',
     image: Prod5,
     specs: [
-      { size: '200 Litres Storage', price: 'KSh 310,000' },
-      { size: '400 Litres Storage', price: 'KSh 360,000' },
-      { size: '600 Litres Storage', price: 'KSh 380,000' },
-      { size: '800 Litres Storage', price: 'KSh 580,000' },
+      { size: '200 Litres', Storage:"400" , price: 'KSh 310,000' },
+      { size: '300 Litres', Storage:"500" , price: 'KSh 360,000' },
+      { size: '400 Litres', Storage:"600" , price: 'KSh 380,000' },
+      { size: '600 Litres', Storage: "800", price: 'KSh 580,000' },
     ],
   },
   {
@@ -104,7 +112,7 @@ const AccessoriesSection = () => {
         </div>
 
         <div className={styles.tableWrap}>
-          <h3>Table of the product categories</h3>
+          <h3>Table of the Poduct Categories</h3>
 
           <table className={styles.specTable}>
             <thead>

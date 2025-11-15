@@ -1,12 +1,12 @@
 .productSection {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     background: $color-bg;
     color: $color-dark;
-    height: 100vh;
+    height: 95vh;
+    background-color: bisque;
 }
 
 .heading {
@@ -90,6 +90,14 @@
     flex: 1;
     min-width: 580px;
     max-width: 900px;
+
+     h3 {
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+        color: $color-dark;
+    }
 
     .specTable {
         width: 100%;

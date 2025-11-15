@@ -7,7 +7,6 @@ import WhyUsSection from '../components/WhyUsSection'
 import TestimonialsSection from '../components/TestimonialsSection'
 import CTASection from '../components/CTASection' 
 import ContactSection from '../components/ContactSection'
-import FooterSection from '../components/FooterSection'
 
 
 
@@ -22,7 +21,6 @@ const Home = () => {
         <TestimonialsSection/>
         <CTASection/>
         <ContactSection/>
-        <FooterSection/>
     </div>
   )
 }

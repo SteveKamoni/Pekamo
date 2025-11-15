@@ -2,6 +2,7 @@ import React from 'react'
 import LearnMoreHero from '../components/LearnMoreHero'
 import ProductTabs from '../components/ProductTabs'
 import AccessoriesSection from '../components/AccessoriesSection'
+import FAQSection from '../components/FAQSection'
 
 
 const LearnMore = () => {
@@ -10,6 +11,7 @@ const LearnMore = () => {
     <LearnMoreHero/>
     <ProductTabs/>
     <AccessoriesSection/>
+    <FAQSection/>
     </>
   )
 }

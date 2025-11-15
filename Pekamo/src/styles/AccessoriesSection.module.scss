@@ -1,12 +1,13 @@
 .productSection {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     background: $color-bg;
     color: $color-dark;
-    min-height: 100vh; // changed from height: 100vh to avoid clipping
+    height: 93vh; // changed from height: 100vh to avoid clipping
+    background-color: beige;
 }
 
 .heading {
@@ -44,7 +45,7 @@
         font-size: 1rem;
         cursor: pointer;
         transition: background 0.2s ease, color 0.2s ease;
-        max-width: 250px;
+        max-width: 200px;
 
         &:hover {
             background: $color-primary;

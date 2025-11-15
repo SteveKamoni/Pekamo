@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import InfoTabs from './components/InfoTabs';
 import AboutSection from "./components/AboutSection";
 import LearnMore from './pages/LearnMore';
+import FooterSection from './components/FooterSection'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         </Route>
         <Route path='/learn-more' element={<LearnMore/>} />
       </Routes>
+      <FooterSection/>
     </BrowserRouter>
   );
 }
