@@ -3,8 +3,8 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import InfoTabs from './components/InfoTabs';
 import AboutSection from "./components/AboutSection";
-// import VisionSection from './components/VisionSection/VisionSection';
-// import MissionSection from './components/MissionSection/MissionSection';
+import LearnMore from './pages/LearnMore';
+
 
 function App() {
   return (
@@ -14,9 +14,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/info" element={<InfoTabs />}>
           <Route path="about" element={<AboutSection />} />
-          {/* <Route path="vision" element={<VisionSection />} />
-           <Route path="mission" element={<MissionSection />} /> */}
         </Route>
+        <Route path='/learn-more' element={<LearnMore/>} />
       </Routes>
     </BrowserRouter>
   );

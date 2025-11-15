@@ -31,6 +31,7 @@
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 
     /* controls card width */
   flex: 1 1 300px; /* grows, shrinks, min width 300px */
@@ -70,6 +71,10 @@
   .icon{
     color:#a8a8a8;
   }
+
+  &:hover{
+    background-color: rgba(#a8a8a8, 0.4);
+  }
 }
 
 .engineering {
@@ -78,6 +83,10 @@
     .icon{
     color: #ffaf7d;;
   }
+    &:hover{
+    background-color: rgba(#FF8C42, 0.4);
+  }
+  
 }
 
 .customer {
@@ -86,6 +95,10 @@
     .icon{
     color: #85acea;
   }
+
+    &:hover{
+    background-color: rgba(#85acea, 0.4);
+  }
 }
 
 .environment {
@@ -93,5 +106,9 @@
 
     .icon{
     color: #648d65;
+  }
+
+    &:hover{
+    background-color: rgba(#648d65, .4);
   }
 }

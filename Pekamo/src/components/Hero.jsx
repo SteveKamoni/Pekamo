@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/Hero.module.scss";
 import Heroimg from "../assets/hero.jpg"
-
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -16,7 +16,7 @@ export default function Hero() {
         </p>
         <div className={styles.actions}>
           <button className={styles.primaryBtn}>Get Started</button>
-          <button className={styles.secondaryBtn}>Learn More</button>
+          <Link to="/learn-more" className={styles.secondaryBtn}>Learn More</Link>
         </div>
       </div>
 

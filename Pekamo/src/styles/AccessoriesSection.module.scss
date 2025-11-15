@@ -1,0 +1,138 @@
+.productSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: $color-bg;
+    color: $color-dark;
+    min-height: 100vh; // changed from height: 100vh to avoid clipping
+}
+
+.heading {
+    font-size: 4.5rem;
+    font-weight: $font-weight-bold;
+    font-family: $font-primary;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.subheading {
+    font-family: $font-secondary;
+    font-size: 2rem;
+    color: $color-secondary;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    max-width: 1200px;
+
+    .tab {
+        background: transparent;
+        font-family: $font-nav;
+        border: 1px solid $color-darker;
+        padding: 0.7rem 1.2rem;
+        border-radius: 2rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s ease, color 0.2s ease;
+        max-width: 250px;
+
+        &:hover {
+            background: $color-primary;
+            color: $color-darker;
+        }
+
+        &.active {
+            background: $color-secondary;
+            color: $color-white;
+            font-weight: $font-weight-bold;
+        }
+    }
+}
+
+/* Content Layout */
+.content {
+    display: flex;
+    gap: 5rem;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeIn 0.4s ease;
+    width: 100%;
+    max-width: 1400px;
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+/* Image container */
+.imageWrap {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+
+    img {
+        width: 100%;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+    }
+}
+
+/* Table container */
+.tableWrap {
+    flex: 1;
+    min-width: 580px;
+    max-width: 900px;
+
+    h3 {
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+        color: $color-dark;
+    }
+
+    .specTable {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+
+        th,
+        td {
+            padding: 0.75rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        th {
+            background: rgba(0, 0, 0, 0.05);
+            font-weight: 600;
+        }
+    }
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

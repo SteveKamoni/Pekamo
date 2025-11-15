@@ -19,7 +19,6 @@ const CTASection = () => {
             <span>— Sarah T., Hostel Manager</span>
           </p>
           <div className={styles.buttons}>
-            <button className={styles.primary}>Contact Us <span className={styles.arrow}>➔</span></button>
             <button className={styles.secondary}>Get Quote ↗</button>
           </div>
           <p className={styles.micro}>No obligation. Just real numbers.</p>

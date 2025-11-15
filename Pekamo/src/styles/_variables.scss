@@ -7,6 +7,11 @@ html{
   scroll-behavior: smooth;
 }
 
+[id] {
+  scroll-margin-top: 100px;
+}
+
+
 /* ---------- Colors (Sass tokens) ---------- */
 $color-primary:  #CDF24A;
 $color-secondary:#1B3D2F;
@@ -16,6 +21,7 @@ $color-bg:       #F8F8F8;
 $color-text:     #000000;
 $color-white:    #ffffff;
 $color-grey: #ECECEC;
+$color-darker: #082b1e;
 
 /* Export the same values as CSS custom properties for runtime use (optional) */
 :root {

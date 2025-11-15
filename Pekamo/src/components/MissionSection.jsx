@@ -25,7 +25,7 @@ const missions = [
 
 const MissionSection = () => {
   return (
-    <section className={styles.mission}>
+    <section className={styles.mission} id='mission'>
       <h2 className={styles.title}>Our Mission</h2>
       <div className={styles.cards}>
         {missions.map((mission, index) => (

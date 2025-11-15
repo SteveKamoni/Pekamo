@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import styles from "../styles/Navbar.module.scss";
 
 export default function Navbar() {
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {

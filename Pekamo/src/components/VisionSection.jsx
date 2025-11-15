@@ -4,7 +4,7 @@ import visionImage from "../assets/Vision.jpg"
 
 const VisionSection = () => {
   return (
-    <section className={styles.vision}>
+    <section className={styles.vision} id='vision'>
       <div className={styles.image}>
         <img
           src={visionImage}
