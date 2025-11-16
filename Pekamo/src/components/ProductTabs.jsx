@@ -164,7 +164,7 @@ export default function ProductTabs() {
   };
 
   return (
-    <section className={styles.productSection} id="products">
+    <section className={styles.productSection} id="product">
       <h2 className={styles.heading}>Products</h2>
       <p className={styles.subheading}>Choose from our various categories</p>
 

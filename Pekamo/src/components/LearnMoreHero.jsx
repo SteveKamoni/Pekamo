@@ -3,7 +3,7 @@ import styles from '../styles/LearnMoreHero.module.scss';
 
 const LearnMoreHero = () => {
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} id='home'>
     <div className={styles.overlay}></div>
       <div className={styles.content}>
         <h1><span>Discover</span> Our <span>Wood</span>-Fueled <span>Solutions</span></h1>

@@ -88,7 +88,7 @@ const AccessoriesSection = () => {
   const tableHeaders = Object.keys(activeItem.specs[0]);
 
   return (
-    <section className={styles.productSection}>
+    <section className={styles.productSection} id='accessories'>
       <h2 className={styles.heading}>Accessories</h2>
       <p className={styles.subheading}>Choose from our various categories</p>
 

@@ -1,57 +1,49 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import navConfig from "../config/nav.config";
 import styles from "../styles/Navbar.module.scss";
 
 export default function Navbar() {
-  const [activeSection, setActiveSection] = useState("");
+  const location = useLocation();
+  const navigate = useNavigate();
+  const pathname = location.pathname || "/";
+  const navLinks = navConfig[pathname] || [];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("section[id]");
-      let current = "";
-
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        if (scrollY >= sectionTop) current = section.getAttribute("id");
-      });
-
-      setActiveSection(current || "home");
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const navLinks = [
-    { id: "home", label: "Home" },
-    { id: "about", label: "About" },
-    { id: "products", label: "Products" },
-    { id: "solutions", label: "Solutions" },
-    { id: "why-us", label: "Why Us" },
-    { id: "testimonials", label: "Testimonials" },
-    { id: "contact", label: "Contact" },
-    { id: "quote", label: "Quote" }
-  ];
+  const handleNavClick = (e, path) => {
+    if (path.startsWith("#")) {
+      e.preventDefault();
+      const el = document.getElementById(path.slice(1));
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      navigate(path);
+    }
+  };
 
   return (
     <nav className={styles.nav}>
       <div className={styles.inner}>
-        <span className={styles.logo}>Pekamo</span>
-
+        <a href="/" className={styles.logo}>PEKAMO TRADERS</a>
         <ul className={styles.links}>
           {navLinks.map(link => (
-            <li key={link.id}>
+            <li key={link.label}>
               <a
-                href={`#${link.id}`}
-                className={activeSection === link.id ? styles.active : ""}
+                href={link.path}
+                onClick={(e) => handleNavClick(e, link.path)}
               >
                 {link.label}
               </a>
             </li>
           ))}
+          <li>
+            <a
+              href="/quote"
+              onClick={(e) => handleNavClick(e, "/quote")}
+            >
+              Quote
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
   );
 }
-

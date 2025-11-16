@@ -5,6 +5,7 @@ import InfoTabs from './components/InfoTabs';
 import AboutSection from "./components/AboutSection";
 import LearnMore from './pages/LearnMore';
 import FooterSection from './components/FooterSection'
+import QuotePage from './pages/QuotePage';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="about" element={<AboutSection />} />
         </Route>
         <Route path='/learn-more' element={<LearnMore/>} />
+        <Route path='/quote' element={<QuotePage/>} />
       </Routes>
       <FooterSection/>
     </BrowserRouter>

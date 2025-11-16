@@ -8,10 +8,10 @@ import FAQSection from '../components/FAQSection'
 const LearnMore = () => {
   return (
     <>
-    <LearnMoreHero/>
-    <ProductTabs/>
-    <AccessoriesSection/>
-    <FAQSection/>
+    <LearnMoreHero id="home"/>
+    <ProductTabs id="products"/>
+    <AccessoriesSection id="accessories"/>
+    <FAQSection id="faq"/>
     </>
   )
 }

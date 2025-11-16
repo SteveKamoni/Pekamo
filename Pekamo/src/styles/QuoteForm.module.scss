@@ -1,0 +1,276 @@
+.quoteForm {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  h2 {
+    font-family: $font-primary;
+    font-weight: $font-weight-bold;
+    color: $color-secondary;
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}
+
+/* ——— Form ——— */
+.form {
+  margin-bottom: 2rem;
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    input {
+      padding: 0.75rem;
+      border: 1px solid $color-grey;
+      border-radius: 0.4rem;
+      font-size: 0.95rem;
+      background: $color-white;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+      &:focus {
+        border-color: $color-primary;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($color-primary, 0.12);
+      }
+    }
+  }
+
+  .notes {
+    width: 100%;
+    min-height: 110px;
+    padding: 0.75rem;
+    border: 1px solid $color-grey;
+    border-radius: 0.4rem;
+    font-size: 0.95rem;
+    background: #fff;
+    margin-bottom: 1.5rem;
+    resize: vertical;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:focus {
+      border-color: $color-primary;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($color-primary, 0.12);
+    }
+  }
+
+  .selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    select {
+      padding: 0.6rem;
+      border-radius: 0.4rem;
+      border: 1px solid $color-grey;
+      font-size: 0.95rem;
+      background: $color-white;
+      min-width: 220px;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+      &:focus {
+        border-color: $color-primary;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($color-primary, 0.12);
+      }
+    }
+
+    button {
+      background: $color-primary;
+      color: $color-secondary;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 0.4rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.15s ease;
+      align-self: center;
+
+      &:hover {
+        background: $color-secondary;
+        color: $color-white;
+        transform: translateY(-1px);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+/* ——— Table & Summary ——— */
+.tableWrap {
+  h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    background: $color-white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    animation: fadeIn 0.25s ease;
+
+    thead {
+      background: #f1f3f5;
+
+      th {
+        padding: 0.85rem 0.75rem;
+        font-weight: 700;
+        color: $color-text;
+        text-align: left;
+      }
+    }
+
+    tbody {
+      tr {
+        transition: background-color 0.2s ease;
+
+        &:nth-child(odd) {
+          background: #fafafa;
+        }
+
+        &:hover {
+          background: #f6f6f6;
+        }
+      }
+
+      td {
+        padding: 0.75rem;
+        border-top: 1px solid #eee;
+        color: $color-text;
+        vertical-align: middle;
+      }
+
+      td:nth-child(6) { /* Total column */
+        font-weight: 600;
+        color: #222;
+      }
+
+      input[type='number'] {
+        width: 72px;
+        padding: 0.45rem;
+        border: 1px solid $color-grey;
+        border-radius: 0.3rem;
+        background: $color-white;
+        font-size: 0.95rem;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+        &:focus {
+          border-color: $color-primary;
+          outline: none;
+          box-shadow: 0 0 0 3px rgba($color-primary, 0.12);
+        }
+      }
+    }
+  }
+
+  .summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 0.5rem;
+    padding: 0.9rem 1rem;
+    margin-bottom: 1rem;
+
+    p {
+      margin: 0;
+      color: #444;
+    }
+
+    .total {
+      font-weight: 700;
+      color: $color-secondary;
+    }
+  }
+
+  .submit {
+    background: $color-secondary;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+    float: right;
+
+    &:hover {
+      background: darken($color-secondary, 7%);
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ——— Confirmation State ——— */
+.confirmation {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 0.75rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  animation: fadeIn 0.3s ease;
+
+  h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  p {
+    color: #555;
+    margin: 0;
+    font-size: 1rem;
+  }
+}
+
+/* ——— Utilities ——— */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ——— Responsive ——— */
+@media (max-width: 768px) {
+  .tableWrap {
+    .summary {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+
+    .submit {
+      width: 100%;
+      float: none;
+    }
+  }
+
+  .form {
+    .selector {
+      select {
+        min-width: 100%;
+      }
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

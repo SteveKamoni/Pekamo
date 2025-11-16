@@ -13,16 +13,17 @@ import ContactSection from '../components/ContactSection'
 const Home = () => {
   return (
     <div>
-        <Hero/>
-        <InfoTabs/>
-        <ProductSection/>
-        <SolutionsSection/>
-        <WhyUsSection/>
-        <TestimonialsSection/>
-        <CTASection/>
-        <ContactSection/>
+        <Hero id="hero" />
+        <InfoTabs id="info" />
+        <ProductSection id="products" />
+        <SolutionsSection id="solutions" />
+        <WhyUsSection id="whyus" />
+        <TestimonialsSection id="testimonials" />
+        <CTASection id="cta" />
+        <ContactSection id="contact" />
     </div>
   )
 }
+
 
 export default Home
