@@ -161,6 +161,10 @@ html{
     display: flex;
     align-items: center;
     gap: 2rem;
+
+    @include respond-to("phone"){
+      gap:8rem;
+    }
   }
 
   .legal {

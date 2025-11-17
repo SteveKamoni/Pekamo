@@ -2,6 +2,10 @@
     padding: 4rem 2rem;
     background: $color-bg;
     color: $color-white;
+
+    @include respond-to("phone"){
+        padding-inline:1rem;
+    }
 }
 
 .container {
@@ -11,7 +15,7 @@
     grid-template-columns: 1fr 420px;
     gap: 2rem;
 
-    @media (max-width: 900px) {
+    @include respond-to("tablet") {
         grid-template-columns: 1fr;
     }
 }
@@ -163,6 +167,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0.5rem;
+
+        @include respond-to("phone"){
+            grid-template-columns: 1fr;
+        }
     }
 
     .inline {
@@ -221,16 +229,16 @@
 
 
 /* Responsive tweaks */
-@media (max-width: 900px) {
-    .right {
-        order: 2;
-    }
+// @media (max-width: 900px) {
+//     .right {
+//         order: 2;
+//     }
 
-    .left {
-        order: 1;
-    }
+//     .left {
+//         order: 1;
+//     }
 
-    .twoCol {
-        grid-template-columns: 1fr;
-    }
-}
+//     .twoCol {
+//         grid-template-columns: 1fr;
+//     }
+// }

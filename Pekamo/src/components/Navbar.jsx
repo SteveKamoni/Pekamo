@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import navConfig from "../config/nav.config";
 import styles from "../styles/Navbar.module.scss";
@@ -8,6 +8,7 @@ export default function Navbar() {
   const navigate = useNavigate();
   const pathname = location.pathname || "/";
   const navLinks = navConfig[pathname] || [];
+  const [open, setOpen] = useState(false);
 
   const handleNavClick = (e, path) => {
     if (path.startsWith("#")) {
@@ -17,13 +18,28 @@ export default function Navbar() {
     } else {
       navigate(path);
     }
+    setOpen(false); // close menu after navigation
   };
 
   return (
     <nav className={styles.nav}>
       <div className={styles.inner}>
         <a href="/" className={styles.logo}>PEKAMO TRADERS</a>
-        <ul className={styles.links}>
+
+        {/* Hamburger button */}
+        <button
+          className={styles.toggle}
+          aria-label="Toggle navigation"
+          aria-expanded={open}
+          onClick={() => setOpen(!open)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        {/* Links */}
+        <ul className={`${styles.links} ${open ? styles.open : ""}`}>
           {navLinks.map(link => (
             <li key={link.label}>
               <a

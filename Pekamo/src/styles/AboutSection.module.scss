@@ -11,7 +11,7 @@
   justify-content: center;
   gap: 7rem;
 
-  @include respond(phone) {
+  @include respond-to(phone) {
     flex-direction: column;
   }
 
@@ -79,7 +79,7 @@
   grid-template-columns: repeat(2, 1fr);
   // gap: 2rem;
 
-  @include respond(phone) {
+  @include respond-to(phone) {
     grid-template-columns: 1fr;
   }
 
@@ -118,6 +118,12 @@
         color: $color-text;
         font-family: $font-text;
       }
+    }
+
+    @include respond-to("phone"){
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 2rem;
     }
   }
 }

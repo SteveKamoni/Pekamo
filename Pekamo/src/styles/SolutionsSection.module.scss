@@ -1,15 +1,21 @@
+.main{
+  margin-top: 2rem;
+}
+
 .solutions {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 10rem;
   padding: 4rem 2rem;
-//   background-color: $color-bg;
-  height: 90vh;
+  height: 100%;
 
 
-  @include respond(phone) {
+
+  @include respond-to("phone") {
     flex-direction: column;
+    height: auto;
+    gap: 5rem;
   }
 }
 

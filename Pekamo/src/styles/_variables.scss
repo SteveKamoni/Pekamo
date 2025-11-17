@@ -3,6 +3,17 @@
    No mixins, no utils. Component .module.scss files will reference these $ variables.
 */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
 html{
   scroll-behavior: smooth;
 }
@@ -10,6 +21,8 @@ html{
 [id] {
   scroll-margin-top: 100px;
 }
+
+
 
 
 /* ---------- Colors (Sass tokens) ---------- */
@@ -54,7 +67,7 @@ $breakpoint-desktop: 1200px;
 
 
 /* Simple responsive mixin */
-@mixin respond($breakpoint) {
+@mixin respond-to($breakpoint) {
   @if $breakpoint == phone {
     @media (max-width: $breakpoint-phone) { @content; }
   } @else if $breakpoint == tablet {

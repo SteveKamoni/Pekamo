@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "../styles/Hero.module.scss";
 import Heroimg from "../assets/hero.jpg"
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+import handleNavClick from "../utility/handleNavClick"
 
 export default function Hero() {
   return (
@@ -15,7 +16,13 @@ export default function Hero() {
           Pikamo Traders specializes in high-performance cooking and heating systems designed for institutions, hotels, and industries. Our durable woodstoves, ovens, and boilers deliver reliable performance while cutting fuel costs and smoke emissions by up to 75%.  
         </p>
         <div className={styles.actions}>
-          <button className={styles.primaryBtn}>Get Started</button>
+            <a
+              href="#products"
+              className={styles.primaryBtn}
+              onClick={(e) => handleNavClick(e, "#products", Navigate)}
+            >
+              Get Started
+            </a>
           <Link to="/learn-more" className={styles.secondaryBtn}>Learn More</Link>
         </div>
       </div>

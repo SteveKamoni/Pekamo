@@ -8,7 +8,7 @@ import SolutionImage from "../assets/solutions.jpg";
 
 const SolutionsSection = () => {
   return (
-    <section id="solutions">
+    <section className={styles.main} id="solutions">
       <h1 className={styles.header}>Solutions</h1>
       <div className={styles.solutions}>
         <div className={styles.left}>

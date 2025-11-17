@@ -1,7 +1,10 @@
 .hero {
   background: url('../assets/LearnMoreHero.jpg') center/cover no-repeat;
-  color: #fff;
-  min-height: 100vh;
+  color: $color-white;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,12 +23,12 @@
 }
 
 .content {
-  max-width: 1500px;
   position: relative;
+  max-width: 1500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 999;
+  z-index: 99;
 
   h1 {
     font-family: $font-primary;

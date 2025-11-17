@@ -1,5 +1,8 @@
 import React from "react";
 import styles from "../styles/QuoteHero.module.scss";
+import handleNavClick from "../utility/handleNavClick"
+import { Navigate } from "react-router-dom";
+
 
 const QuoteHero = () => {
   return (
@@ -14,7 +17,7 @@ const QuoteHero = () => {
           <p> From compact kitchen burners to
             industrial stoves — Pekamo delivers precision-engineered efficiency.
             </p>
-          <a href="#form" className={styles.cta}>
+          <a href="#form" className={styles.cta} onClick={(e) => handleNavClick(e, "#form",Navigate)} >
             Get Quote
           </a>
         </div>

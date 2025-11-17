@@ -10,23 +10,25 @@
   border-radius: 50px;
   background: rgba($color-secondary, 0.65);
   backdrop-filter: blur(22px) saturate(180%);
-  -webkit-backdrop-filter: blur(22px) saturate(180%);
   border: 1px solid rgba($color-white, 0.35);
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 240ms ease;
-  will-change: transform, width;
+
+  
+  @include respond-to(phone) {
+    width: 100%;
+    padding-inline: 1.5rem;
+    height: 65px;
+  }
 }
 
 .inner {
   width: 100%;
-  max-width: 1400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2.2rem;
-  padding: 0.5rem 0;
 }
 
 .logo {
@@ -37,13 +39,35 @@
   text-decoration: none;
 }
 
+.toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  span {
+    display: block;
+    height: 2px;
+    background: $color-white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  @include respond-to(phone) {
+    display: flex;
+  }
+}
+
 .links {
   list-style: none;
   display: flex;
   gap: 1rem;
   margin: 0;
   padding: 0;
-  align-items: center;
 
   li a {
     font-family: $font-nav;
@@ -58,7 +82,30 @@
       background: $color-primary;
       color: $color-text;
       transform: translateY(-2px);
-      outline: none;
+    }
+  }
+
+  @include respond-to(phone) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: $color-secondary;
+    border-radius: 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    overflow: scroll;
+
+    &.open {
+      max-height: 300px; // enough to show all links
+      padding: 1rem 0;
+    }
+
+    li {
+      text-align: center;
+      margin: 0.5rem 0;
     }
   }
 }

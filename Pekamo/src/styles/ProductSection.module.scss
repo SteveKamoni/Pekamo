@@ -18,6 +18,11 @@
   gap: 2rem;
   max-width: 1700px; // or whatever fits your layout
   margin: 0 auto;     // centers the grid horizontally
+
+  @include respond-to("phone"){
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
 }
 
 
