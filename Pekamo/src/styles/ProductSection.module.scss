@@ -23,6 +23,11 @@
     grid-template-columns: 1fr;
     justify-content: center;
   }
+
+  @include respond-to("tablet"){
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
 }
 
 

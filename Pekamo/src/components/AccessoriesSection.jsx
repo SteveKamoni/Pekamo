@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styles from '../styles/AccessoriesSection.module.scss';
-import Prod1 from "../assets/chimney.jpg";
-import Prod2 from "../assets/cast irorn.jpg";
-import Prod3 from "../assets/stainless.jpg";
-import Prod4 from "../assets/wood stove oven.jpg";
-import Prod5 from "../assets/Prod5.jpg";
+import Prod1 from "../assets/chimney.webp";
+import Prod2 from "../assets/cast irorn.webp";
+import Prod3 from "../assets/stainless.webp";
+import Prod4 from "../assets/wood stove oven.webp";
+import Prod5 from "../assets/Prod5.webp";
 
 const accessoriesData = [
   {

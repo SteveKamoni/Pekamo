@@ -16,11 +16,16 @@
   align-items: center;
   transition: all 240ms ease;
 
-  
-  @include respond-to(phone) {
+  @include respond-to("phone") {
     width: 100%;
     padding-inline: 1.5rem;
     height: 65px;
+  }
+
+  @include respond-to("tablet") {
+    width: 100%;
+    padding-inline: 2rem;
+    height: 75px;
   }
 }
 
@@ -37,6 +42,14 @@
   font-weight: $font-weight-medium;
   color: $color-white;
   text-decoration: none;
+
+  @include respond-to("phone") {
+    font-size: 1.1rem;
+  }
+
+  @include respond-to("tablet") {
+    font-size: 1.2rem;
+  }
 }
 
 .toggle {
@@ -57,7 +70,11 @@
     transition: all 0.3s ease;
   }
 
-  @include respond-to(phone) {
+  @include respond-to("phone") {
+    display: flex;
+  }
+
+  @include respond-to("tablet") {
     display: flex;
   }
 }
@@ -85,27 +102,51 @@
     }
   }
 
-  @include respond-to(phone) {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background: $color-secondary;
-    border-radius: 1.5rem;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    overflow: scroll;
+  // Collapse links for phone AND tablet
+ @include respond-to("phone") {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  background: $color-secondary;
+  border-radius: 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  overflow-y: auto;
 
-    &.open {
-      max-height: 300px; // enough to show all links
-      padding: 1rem 0;
-    }
+  &.open {
+    max-height: 300px;
+    padding: 1rem 0;
+  }
 
-    li {
-      text-align: center;
-      margin: 0.5rem 0;
-    }
+  li {
+    text-align: center;
+    margin: 0.5rem 0;
   }
 }
+
+@include respond-to("tablet") {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  background: $color-secondary;
+  border-radius: 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  overflow-y: auto;
+
+  &.open {
+    max-height: 400px; // allow more space for tablet
+    padding: 1rem 0;
+  }
+
+  li {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+}}

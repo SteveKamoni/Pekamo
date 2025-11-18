@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/Hero.module.scss";
-import Heroimg from "../assets/hero.jpg"
+import Heroimg from "../assets/hero.webp"
 import { Link, Navigate } from "react-router-dom";
 import handleNavClick from "../utility/handleNavClick"
 

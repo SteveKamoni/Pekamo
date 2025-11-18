@@ -7,6 +7,13 @@
     color: $color-dark;
     height: 95vh;
     background-color: bisque;
+
+    @include respond-to("phone"){
+        height: auto;
+    }
+    @include respond-to("tablet"){
+        height: auto;
+    }
 }
 
 .heading {
@@ -68,9 +75,14 @@
     width: auto;
     //   max-width: 1500px;
 
-    @media (max-width: 800px) {
-        flex-direction: column;
-        align-items: center;
+    // @media (max-width: 800px) {
+    //     flex-direction: column;
+    //     align-items: center;
+    // }
+
+     @include respond-to("phone"){
+        overflow: scroll;
+        width: 100%;
     }
 }
 
@@ -88,8 +100,6 @@
 
 .tableWrap {
     flex: 1;
-    min-width: 580px;
-    max-width: 900px;
 
      h3 {
         font-family: $font-primary;

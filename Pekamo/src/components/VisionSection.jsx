@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/VisionSection.module.scss';
-import visionImage from "../assets/Vision.jpg"
+import visionImage from "../assets/Vision.webp"
 
 const VisionSection = () => {
   return (

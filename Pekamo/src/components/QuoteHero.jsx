@@ -9,7 +9,7 @@ const QuoteHero = () => {
     <section className={styles.hero} id="home">
       <div className={styles.overlay}>
         <div className={styles.content}>
-          <h1>Get a Custom Quote for Your Wood-Fueled System</h1>
+          <h1>Get a <span>Custom</span> Quote for Your <span>Wood</span>-Fueled <span>System</span></h1>
           <p>
             Tell us what you need, and we’ll build a solution that fits your
             space, capacity, and budget.

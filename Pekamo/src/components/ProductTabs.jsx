@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import styles from "../styles/ProductTabs.module.scss";
 import clsx from "clsx";
-import Prod1 from "../assets/Prod1.jpg";
-import Prod2 from "../assets/Prod2.jpg";
-import Prod3 from "../assets/Prod3.jpg";
-import Prod4 from "../assets/Prod4.jpg";
-import Prod5 from "../assets/Prod5.jpg";
-import Prod6 from "../assets/Prod6.jpg";
-import Prod7 from "../assets/Prod7.jpg";
-import Prod8 from "../assets/Prod8.jpg";
+import Prod1 from "../assets/Prod1.webp";
+import Prod2 from "../assets/Prod2.webp";
+import Prod3 from "../assets/Prod3.webp";
+import Prod4 from "../assets/Prod4.webp";
+import Prod5 from "../assets/Prod5.webp";
+import Prod6 from "../assets/Prod6.webp";
+import Prod7 from "../assets/Prod7.webp";
+import Prod8 from "../assets/Prod8.webp";
 
 const productsData = [
   // 1. Single Burner Woodstove (has mild/stainless prices)

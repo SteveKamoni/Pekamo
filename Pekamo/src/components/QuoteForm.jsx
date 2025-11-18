@@ -122,6 +122,7 @@ const QuoteForm = () => {
                             value={formData.notes}
                             onChange={(e) => handleInputChange("notes", e.target.value)}
                             className={styles.notes}
+                            name="text-area"
                         />
 
                         <div className={styles.selector}>

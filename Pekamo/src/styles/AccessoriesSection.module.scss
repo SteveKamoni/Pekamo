@@ -8,6 +8,14 @@
     color: $color-dark;
     height: 93vh; // changed from height: 100vh to avoid clipping
     background-color: beige;
+
+    @include respond-to("phone"){
+        height: auto;
+    }
+
+    @include respond-to("tablet"){
+        height: auto;
+    }
 }
 
 .heading {
@@ -71,11 +79,16 @@
     width: 100%;
     max-width: 1400px;
 
-    @media (max-width: 900px) {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
+    @include respond-to("phone"){
+        align-content: center;
+        overflow-x: scroll;
     }
+
+    // @media (max-width: 900px) {
+    //     flex-direction: column;
+    //     align-items: center;
+    //     gap: 2rem;
+    // }
 }
 
 /* Image container */
@@ -95,8 +108,11 @@
 /* Table container */
 .tableWrap {
     flex: 1;
-    min-width: 580px;
-    max-width: 900px;
+
+
+    @include respond-to("phone"){
+        width: 100%;
+    }
 
     h3 {
         font-family: $font-primary;

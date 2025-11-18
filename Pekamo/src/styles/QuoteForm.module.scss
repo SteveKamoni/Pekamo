@@ -116,7 +116,7 @@
     margin-bottom: 1rem;
     background: $color-white;
     border-radius: 0.5rem;
-    overflow: hidden;
+    overflow-x: hidden;
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
     animation: fadeIn 0.25s ease;
 
@@ -207,7 +207,7 @@
     float: right;
 
     &:hover {
-      background: darken($color-secondary, 7%);
+      background: color.adjust($color-secondary,$lightness: -7%);
       transform: translateY(-1px);
     }
 
@@ -215,6 +215,10 @@
       transform: translateY(0);
     }
   }
+
+  @include respond-to("phone") {
+      overflow-x: scroll;
+    }
 }
 
 /* ——— Confirmation State ——— */

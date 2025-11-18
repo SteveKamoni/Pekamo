@@ -17,6 +17,12 @@
     height: auto;
     gap: 5rem;
   }
+
+  @include respond-to("tablet") {
+    flex-direction: column;
+    // height: 100vh;
+    gap: 5rem;
+  }
 }
 
 .header{
@@ -32,6 +38,12 @@
     flex-direction: column;
     gap: 3.5rem;
     max-width: 750px;
+
+  @include respond-to("tablet") {
+    flex-direction: column;
+    height: 100vh;
+    gap: 5rem;
+  }
 
 
     .cta {

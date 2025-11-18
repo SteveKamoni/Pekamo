@@ -1,8 +1,11 @@
 import React from 'react';
 import styles from '../styles/AboutSection.module.scss';
-import image1 from "../assets/About-intro.jpg"
-import image2 from "../assets/Years-img.jpg";
-import image3 from "../assets/Customer.jpg";
+import image1 from "../assets/About-intro.webp";
+import image2 from "../assets/Years-img.webp";
+import image3 from "../assets/Customer.webp";
+import handleNavClick from "../utility/handleNavClick"
+
+
 
 const AboutSection = () => {
   return (
@@ -19,7 +22,7 @@ const AboutSection = () => {
            <p className={styles.short}>
             Pekamo Traders is a Kenyan engineering company dedicated to transforming how institutions cook, bake, and heat water. Since our founding, we’ve focused on energy efficiency, local craftsmanship, and environmentally responsible technologies that make large-scale kitchens cleaner, safer, and more affordable to operate.
            </p>
-          <button className={styles.cta}>Reach Out</button>
+          <a href="#contact" className={styles.cta}  onClick={(e) => handleNavClick(e, "#contact", Navigate)} >Reach Out</a>
         </div>
       </div>
 

@@ -9,6 +9,11 @@
     flex-direction: column;
     gap: 2rem;
   }
+
+  @include respond-to(tablet) {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 
 .image {

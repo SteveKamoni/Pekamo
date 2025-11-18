@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { HiOutlineOfficeBuilding, HiOutlineCog } from 'react-icons/hi';
 import { MdLocalFireDepartment } from 'react-icons/md';
 import { FaArrowRight } from "react-icons/fa";
-import SolutionImage from "../assets/solutions.jpg";
+import SolutionImage from "../assets/solutions.webp";
 
 const SolutionsSection = () => {
   return (

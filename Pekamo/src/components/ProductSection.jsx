@@ -1,14 +1,14 @@
 import React from 'react';
 import styles from '../styles/ProductSection.module.scss';
 import { Link } from 'react-router-dom';
-import Image1 from "../assets/Prod1.jpg"
-import Image2 from "../assets/Prod2.jpg"
-import Image3 from "../assets/Prod3.jpg"
-import Image4 from "../assets/Prod4.jpg"
-import Image5 from "../assets/Prod5.jpg"
-import Image6 from "../assets/Prod6.jpg"
-import Image7 from "../assets/Prod7.jpg"
-import Image8 from "../assets/Prod8.jpg"
+import Image1 from "../assets/Prod1.webp"
+import Image2 from "../assets/Prod2.webp"
+import Image3 from "../assets/Prod3.webp"
+import Image4 from "../assets/Prod4.webp"
+import Image5 from "../assets/Prod5.webp"
+import Image6 from "../assets/Prod6.webp"
+import Image7 from "../assets/Prod7.webp"
+import Image8 from "../assets/Prod8.webp"
 
 const products = [
   {

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/CTASection.module.scss';
-import bgImage from '../assets/logs.jpg'; // Replace with your actual image path
+import bgImage from '../assets/logs.webp'; // Replace with your actual image path
 
 const CTASection = () => {
   return (

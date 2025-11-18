@@ -63,6 +63,10 @@
         padding: 2rem;
         color: $color-white;
     }
+
+    @include respond-to("phone"){
+        overflow-y: scroll;
+    }
 }
 
 .cta {
