@@ -1,25 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/FooterSection.module.scss';
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 
+export default function FooterSection() {
+  const [email, setEmail] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+    if (!email.trim()) {
+      setError('Please enter a valid email');
+      return;
+    }
 
-const FooterSection = () => {
+    try {
+      const res = await fetch('http://localhost:5000/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+        setEmail('');
+      } else {
+        const data = await res.json();
+        setError(data.message || 'Subscription failed. Try again.');
+      }
+    } catch (err) {
+      console.error(err);
+      setError('Something went wrong. Please try again later.');
+    }
+  };
+
   return (
     <footer className={styles.footer}>
       <div className={styles.grid}>
-        
         {/* Branding */}
         <div className={styles.branding}>
-          {/* <img src="/logo-akdar.svg" alt="Akdar logo" className={styles.logo} /> */}
-
           <h4>PEKAMO TRADERS</h4>
-
           <p className={styles.description}>
             We engineer smart, wood-fueled energy systems that reduce costs and improve lives.
           </p>
-
-          {/* <button className={styles.moreBtn}>More ⌄</button> */}
         </div>
 
         {/* Quick Links */}
@@ -47,7 +71,7 @@ const FooterSection = () => {
           </ul>
         </nav>
 
-        {/* Resources */}
+        {/* Resources & Subscription */}
         <div className={styles.column}>
           <h5>Resources</h5>
           <ul>
@@ -58,10 +82,21 @@ const FooterSection = () => {
           <div className={styles.subscribe}>
             <h3>Subscribe for updates</h3>
             <i>100+ kitchens rely on us — stay informed.</i>
-            <form className={styles.form}>
-              <input type="email" placeholder="Your email" required />
-              <button type="submit">Submit</button>
-            </form>
+            {submitted ? (
+              <p>Thank you for subscribing!</p>
+            ) : (
+              <form className={styles.form} onSubmit={handleSubmit}>
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <button type="submit">Submit</button>
+                {error && <div className={styles.error}>{error}</div>}
+              </form>
+            )}
           </div>
         </div>
       </div>
@@ -69,13 +104,11 @@ const FooterSection = () => {
       {/* Bottom */}
       <div className={styles.bottom}>
         <p>© 2023 PEKAMO Traders. All Rights Reserved.</p>
-
         <div className={styles.bottomRight}>
           <div className={styles.legal}>
             <a href="/terms">Terms</a>
             <a href="/privacy">Privacy</a>
           </div>
-
           <div className={styles.socials}>
             <a href="#" aria-label="Facebook"><FaFacebookF /></a>
             <a href="#" aria-label="Twitter"><FaTwitter /></a>
@@ -85,6 +118,4 @@ const FooterSection = () => {
       </div>
     </footer>
   );
-};
-
-export default FooterSection;
+}

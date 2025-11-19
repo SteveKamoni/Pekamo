@@ -1,8 +1,27 @@
 {
+  "name": "pekamo-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "server": "cd backend && npm run dev",
+    "client": "cd Pekamo && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
   "dependencies": {
-    "react-icons": "^5.5.0"
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.0.0",
+    "mongoose": "^7.6.0",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.8",
+    "react-icons": "^5.5.0",
+    "validator": "^13.11.0",
+    "nanoid": "^4.0.2"
   },
   "devDependencies": {
-    "concurrently": "^9.2.1"
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.11"
   }
 }
