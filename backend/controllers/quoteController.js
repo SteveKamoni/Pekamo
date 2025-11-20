@@ -33,7 +33,7 @@ export const createQuote = async (req, res) => {
 
     // compute totals server-side
     const processedItems = items.map((item) => {
-      const unitPriceNumeric = parseInt(item.unitPrice.replace(/\D/g, ""));
+      const unitPriceNumeric = Number(item.unitPrice); // <-- treat as number
       const total = unitPriceNumeric * item.quantity;
       return {
         name: item.name,
