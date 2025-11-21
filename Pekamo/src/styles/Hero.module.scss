@@ -1,3 +1,5 @@
+@use '../styles/textAnimations' as ta;
+
 .hero {
   position: relative;
   width: 100%;
@@ -48,6 +50,11 @@
   color: $color-primary;
   font-family: $font-secondary;
   letter-spacing: 0.05rem;
+
+.text-typewriter { 
+  @include typewriter(50, 4s); 
+}
+
 }
 
 .title {
@@ -125,4 +132,9 @@
   &:hover {
     background: rgba(255, 255, 255, 0.15);
   }
+}
+
+// Animations
+.text-typewriter { 
+  @include typewriter(50, 4s); 
 }
