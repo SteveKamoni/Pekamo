@@ -3,7 +3,6 @@ import styles from "../styles/Hero.module.scss";
 import Heroimg from "../assets/hero.webp";
 import { Link, Navigate } from "react-router-dom";
 import handleNavClick from "../utility/handleNavClick";
-import { Animate } from "../components/animations.jsx"; // Reusable wrapper
 
 export default function Hero() {
   return (
@@ -12,8 +11,6 @@ export default function Hero() {
 
       <div className={styles.content}>
         {/* Typewriter tagline */}
-        <Animate type="fade" duration={2} >
-          </Animate>
           <p className={`${styles.tagline} text-typewriter`}>
           Efficient Energy Solutions for Modern Kitchens
         </p>
@@ -29,7 +26,6 @@ export default function Hero() {
         </p>
 
         {/* Buttons wrapped in fade-in animation */}
-        <Animate type="fade" duration={2.5}>
           <div className={styles.actions}>
             <a
               href="#products"
@@ -42,7 +38,6 @@ export default function Hero() {
               Learn More
             </Link>
           </div>
-        </Animate>
       </div>
 
       <img src={Heroimg} alt="Hero" className={styles.backgroundImage} />
