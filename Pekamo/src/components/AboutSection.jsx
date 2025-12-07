@@ -15,7 +15,7 @@ const AboutSection = () => {
           className={styles.image}
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
           <img src={image1} alt="PEKAMO team at work" />
@@ -25,7 +25,7 @@ const AboutSection = () => {
           className={styles.text}
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 1.2, delay: 0.2 }}
           viewport={{ once: true }}
         >
           <h2>Who are we at PEKAMO</h2>
@@ -33,7 +33,7 @@ const AboutSection = () => {
             className={styles.description}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 1.3, delay: 0.4 }}
             viewport={{ once: true }}
           >
             Pikamo Traders is a locally owned enterprise specializing in the design and manufacture of institutional woodstoves, ovens, boilers, and energy-efficient cooking systems. With years of innovation in eco-friendly heating technology, we help schools, hotels, and industries reduce fuel consumption while improving kitchen performance. Our products are built with precision and tested for durability, ensuring long-term reliability and easy maintenance. At Pikamo, we believe energy efficiency isn’t just about saving costs — it’s about creating cleaner, safer kitchens and a sustainable future.
@@ -42,7 +42,7 @@ const AboutSection = () => {
             className={styles.short}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 1.4, delay: 0.6 }}
             viewport={{ once: true }}
           >
             Pekamo Traders is a Kenyan engineering company dedicated to transforming how institutions cook, bake, and heat water. Since our founding, we’ve focused on energy efficiency, local craftsmanship, and environmentally responsible technologies that make large-scale kitchens cleaner, safer, and more affordable to operate.
@@ -53,7 +53,7 @@ const AboutSection = () => {
             onClick={(e) => handleNavClick(e, "#contact")}
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            transition={{ duration: 1, delay: 0.8 }}
             viewport={{ once: true }}
           >
             Reach Out
@@ -69,7 +69,7 @@ const AboutSection = () => {
             className={styles.item}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: i * 0.3 }}
+            transition={{ duration: 1.4, delay: i * 0.3 }}
             viewport={{ once: true }}
           >
             <img src={item.img} alt={item.alt} />
@@ -77,7 +77,7 @@ const AboutSection = () => {
               className={styles.box}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
+              transition={{ duration: 1.4, delay: 0.4 }}
               viewport={{ once: true }}
             >
               <h2>5+</h2>

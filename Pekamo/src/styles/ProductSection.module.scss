@@ -107,7 +107,7 @@
   }
 
   &:hover {
-    background-color: rgba($color-secondary, 0.6);
+    background-color: $color-secondary;
     color: $color-white;
     transform: scale(1.05);
     cursor: pointer;
@@ -118,24 +118,33 @@
     h3 {
       color: $color-primary;
     }
+
+    .buttonSec{
+      border-color: $color-primary;
+      color: $color-primary;
+    }
+
+    .buttonPrime{
+      border: 1px solid $color-primary;
+    }
   }
 }
 
 // Animations
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+// @keyframes fadeUp {
+//   from {
+//     opacity: 0;
+//     transform: translateY(20px);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
 
-.card {
-  // existing styles...
-  &.animate {
-    animation: fadeUp 0.6s ease forwards;
-  }
-}
+// .card {
+//   // existing styles...
+//   &.animate {
+//     animation: fadeUp 0.6s ease forwards;
+//   }
+// }

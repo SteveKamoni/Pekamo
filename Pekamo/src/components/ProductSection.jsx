@@ -116,10 +116,10 @@ const ProductSection = () => {
               transition={{ duration: 0.5, delay: 0.5 }}
               viewport={{ once: true }}
             >
-              <Link to={`/products/${index}`} className={styles.buttonPrime}>
+              <Link to="/learn-more" className={styles.buttonPrime}>
                 Learn More
               </Link>
-              <Link to={`/quote/${index}`} className={styles.buttonSec}>
+              <Link to="/quote" className={styles.buttonSec}>
                 Quote
               </Link>
             </motion.div>

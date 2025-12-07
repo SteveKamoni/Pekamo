@@ -3,6 +3,7 @@ import styles from '../styles/InfoTabs.module.scss';
 import AboutSection from './AboutSection';
 import VisionSection from './VisionSection';
 import MissionSection from './MissionSection';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const tabs = [
   { id: 'about', label: 'About' },
@@ -39,8 +40,19 @@ const InfoTabs = () => {
           </button>
         ))}
       </nav>
+
       <div className={styles.content}>
-        {renderContent()}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.25, ease: 'easeOut' }}
+          >
+            {renderContent()}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styles from '../styles/FAQSection.module.scss';
+import {motion} from "framer-motion"
+
 
 const faqs = [
   {
@@ -33,7 +35,13 @@ export default function FAQSection() {
 
   return (
     <section className={styles.faqSection} id="faq">
-      <h2 className={styles.heading}>FAQs</h2>
+      <motion.h2 
+      className={styles.heading}
+      initial={{ opacity: 0, y: -50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: 0.9, ease: "easeOut", delay: 0.1 }}
+      >FAQs</motion.h2>
       <div className={styles.list}>
         {faqs.map((faq, index) => (
           <div key={index} className={styles.item}>

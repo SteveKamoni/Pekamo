@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "../styles/QuoteForm.module.scss";
 import { productsData, accessoriesData } from "../data/productsData";
 import useQuoteForm from "../hooks/useQuoteForm";
+import {motion} from "framer-motion"
 
 const allCategories = [...productsData, ...accessoriesData];
 
@@ -91,7 +92,12 @@ export default function QuoteForm() {
 
   return (
     <section className={styles.quoteForm} id="form">
-      <h2>Get Your Quote</h2>
+      <motion.h2
+      initial={{ opacity: 0, y: -50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: 0.9, ease: "easeOut", delay: 0.1 }}
+      >Get Your Quote</motion.h2>
 
       {!submitted ? (
         <>

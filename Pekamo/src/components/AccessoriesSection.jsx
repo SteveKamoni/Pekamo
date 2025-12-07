@@ -5,6 +5,8 @@ import Prod2 from "../assets/cast irorn.webp";
 import Prod3 from "../assets/stainless.webp";
 import Prod4 from "../assets/wood stove oven.webp";
 import Prod5 from "../assets/Prod5.webp";
+import {motion} from "framer-motion"
+
 
 const accessoriesData = [
   {
@@ -89,8 +91,20 @@ const AccessoriesSection = () => {
 
   return (
     <section className={styles.productSection} id='accessories'>
-      <h2 className={styles.heading}>Accessories</h2>
-      <p className={styles.subheading}>Choose from our various categories</p>
+      <motion.h2 
+      className={styles.heading}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      >Accessories</motion.h2>
+      <motion.p 
+      className={styles.subheading}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: 0.9, ease: "easeOut", delay: 0.1 }}
+      >Choose from our various categories</motion.p>
 
       {/* Tabs */}
       <div className={styles.tabs}>

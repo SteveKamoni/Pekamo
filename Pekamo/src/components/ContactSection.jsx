@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/ContactSection.module.scss";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import {motion} from "framer-motion"
+
 
 const LS_KEY = "pekamo:contact:qualifier";
 
@@ -91,7 +93,13 @@ export default function ContactSection() {
   return (
     <section className={styles.contact} id="contact">
       <div className={styles.container}>
-        <div className={styles.left}>
+        <motion.div 
+        className={styles.left}
+        initial={{ opacity: 0, x: -70 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.2 }}
+        viewport={{ once: true }}
+        >
           <h2 className={styles.heading}>Get in touch</h2>
           <p className={styles.lead}>
             Reach our team for general enquiries, installations and support. For
@@ -103,23 +111,23 @@ export default function ContactSection() {
           >
             <div className={styles.item}>
               <strong>Office</strong>
-              <span>Unit 4, Industrial Park Rd, Nakuru</span>
+              <span>Along Solai Road, Josu House, Nakuru</span>
             </div>
             <div className={styles.item}>
               <strong>Phone</strong>
               <a href="tel:+254700000000" className={styles.link}>
-                +254 700 000 000
+                +254 722 399 761
               </a>
             </div>
             <div className={styles.item}>
               <strong>Email</strong>
               <a href="mailto:info@pekamo.co" className={styles.link}>
-                info@pekamo.co
+                pkamoni42@gmail.com
               </a>
             </div>
             <div className={styles.item}>
               <strong>Hours</strong>
-              <span>Mon–Sun 8:00–17:00</span>
+              <span>Mon–Sat 8:00AM – 5:00PM </span>
             </div>
             <div
               className={styles.socials}
@@ -140,9 +148,15 @@ export default function ContactSection() {
               Installed in <strong>120+</strong> kitchens across Kenya
             </div>
           </address>
-        </div>
+        </motion.div>
 
-        <div className={styles.right}>
+        <motion.div 
+        className={styles.right}
+        initial={{ opacity: 0, x: 70 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.2 }}
+        viewport={{ once: true }}
+        >
           <div
             className={styles.card}
             role="region"
@@ -322,7 +336,7 @@ export default function ContactSection() {
               </form>
             )}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -9,6 +9,7 @@ import Prod5 from "../assets/Prod5.webp";
 import Prod6 from "../assets/Prod6.webp";
 import Prod7 from "../assets/Prod7.webp";
 import Prod8 from "../assets/Prod8.webp";
+import {motion} from "framer-motion"
 
 const productsData = [
   // 1. Single Burner Woodstove (has mild/stainless prices)
@@ -165,8 +166,25 @@ export default function ProductTabs() {
 
   return (
     <section className={styles.productSection} id="product">
-      <h2 className={styles.heading}>Products</h2>
-      <p className={styles.subheading}>Choose from our various categories</p>
+        <motion.h2
+          className={styles.heading}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+        >
+          Products
+        </motion.h2>
+
+        <motion.p
+          className={styles.subheading}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.9, ease: "easeOut", delay: 0.1 }}
+        >
+          Choose from our various categories
+        </motion.p>
 
       {/* Tabs */}
       <div className={styles.tabs}>
