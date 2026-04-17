@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/QuoteForm.module.scss";
-import { productsData, accessoriesData } from "../data/productsData";
+import { productsData, accessoriesData } from "../data/ProductsData";
 import useQuoteForm from "../hooks/useQuoteForm";
 import {motion} from "framer-motion"
 
