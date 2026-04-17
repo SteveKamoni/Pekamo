@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/testimonialsSection.module.scss";
+import styles from "../styles/TestimonialsSection.module.scss";
 import { motion } from "framer-motion";
 
 const Testimonials = () => {
