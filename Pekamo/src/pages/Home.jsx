@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import Hero from '../components/Hero'
 import InfoTabs from '../components/InfoTabs'
 import ProductSection from '../components/ProductSection'
 import SolutionsSection from '../components/SolutionsSection'
 import WhyUsSection from '../components/WhyUsSection'
-import TestimonialsSection from '../components/TestimonialsSection'
 import CTASection from '../components/CTASection' 
-import ContactSection from '../components/ContactSection'
+import LoadingSpinner from '../components/LoadingSpinner'
 
-
+// Lazy load below-the-fold components for better initial performance
+const TestimonialsSection = lazy(() => import('../components/TestimonialsSection'))
+const ContactSection = lazy(() => import('../components/ContactSection'))
 
 const Home = () => {
   return (
@@ -18,12 +19,18 @@ const Home = () => {
         <ProductSection id="products" />
         <SolutionsSection id="solutions" />
         <WhyUsSection id="whyus" />
-        <TestimonialsSection id="testimonials" />
         <CTASection id="cta" />
-        <ContactSection id="contact" />
+        
+        {/* Below-the-fold sections are lazy loaded */}
+        <Suspense fallback={<LoadingSpinner />}>
+          <TestimonialsSection id="testimonials" />
+        </Suspense>
+        
+        <Suspense fallback={<LoadingSpinner />}>
+          <ContactSection id="contact" />
+        </Suspense>
     </div>
   )
 }
-
 
 export default Home
